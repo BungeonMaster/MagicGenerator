@@ -1,0 +1,184 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
+
+public class MagicGenerator {
+	
+	ArrayList<String> levelOneList = new ArrayList<String>();
+	ArrayList<String> levelTwoList = new ArrayList<String>();
+	ArrayList<String> levelThreeList = new ArrayList<String>();
+	Random rand = new Random();
+	
+	public MagicGenerator() {
+		
+		addLevelOneSpells();
+		addLevelTwoSpells();
+		addLevelThreeSpells();
+	}
+
+	public static void main(String[] args) {
+		
+		MagicGenerator magicGen = new MagicGenerator();
+		
+		System.out.println("Level 1 Spells");
+		System.out.println("______________");
+		magicGen.generateRandomLevelOneSpells(6);
+		System.out.println("______________");
+		System.out.println("Level 2 Spells");
+		magicGen.generateRandomLevelTwoSpells(5);
+		System.out.println("______________");
+		System.out.println("Level 3 Spells");
+		System.out.println("______________");
+		magicGen.generateRandomLevelOneSpells(7);
+	}
+	
+	public void addLevelOneSpells() {
+		levelOneList.add("Alarm");
+		levelOneList.add("Animal Friendship");
+		levelOneList.add("Armor of Agathys");
+		levelOneList.add("Bane");
+		levelOneList.add("Beast Bond");
+		levelOneList.add("Bless");
+		levelOneList.add("Ceremony");
+		levelOneList.add("Beast Bond");
+		levelOneList.add("Chromatic Orb");
+		levelOneList.add("Color Spray");
+		levelOneList.add("Comprehend Languages");
+		levelOneList.add("Create or Destroy Water");
+		levelOneList.add("Detect Poison and Disease");
+		levelOneList.add("False Life");
+		levelOneList.add("Feather Fall");
+		levelOneList.add("Find Familiar");
+		levelOneList.add("Floating Disk");
+		levelOneList.add("Goodberry");
+		levelOneList.add("Grease");
+		levelOneList.add("Hideous Laughter");
+		levelOneList.add("Ice Knife");
+		levelOneList.add("Identify");
+		levelOneList.add("Illusory Script");
+		levelOneList.add("Jump");
+		levelOneList.add("Longstrider");
+		levelOneList.add("Mage Armor");
+		levelOneList.add("Protection from Evil and Good");
+		levelOneList.add("Sanctuary");
+		levelOneList.add("Shield of Faith");
+		levelOneList.add("Silent Image");
+		levelOneList.add("Sleep");
+		levelOneList.add("Snare");
+		levelOneList.add("Unseen Servant");
+		levelOneList.add("Witch Bolt");
+	}
+	
+	public void addLevelTwoSpells() {
+		
+		levelTwoList.add("Acid Arrow");
+		levelTwoList.add("Aganazzar's Scorcher");
+		levelTwoList.add("Aid");
+		levelTwoList.add("Animal Messenger");
+		levelTwoList.add("Arcane Lock");
+		levelTwoList.add("Arcanist's Magic Aura");
+		levelTwoList.add("Augury");
+		levelTwoList.add("Barkskin");
+		levelTwoList.add("Cloud of Daggers");
+		levelTwoList.add("Continnual Flame");
+		levelTwoList.add("Cordon of Arrows");
+		levelTwoList.add("Darkness");
+		levelTwoList.add("Darkvision");
+		levelTwoList.add("Detect Thoughts");
+		levelTwoList.add("Dragon's Breath");
+		levelTwoList.add("Dust Devil");
+		levelTwoList.add("Enhance Ability");
+		levelTwoList.add("Enlarge/Reduce");
+		levelTwoList.add("Flame Blade");
+		levelTwoList.add("Flaming Sphere");
+		levelTwoList.add("Gentle Repose");
+		levelTwoList.add("Gust of Wind");
+		levelTwoList.add("Heat Metal");
+		levelTwoList.add("Hold Person");
+		levelTwoList.add("Invisibility");
+		levelTwoList.add("Levitate");
+		levelTwoList.add("Locate Animals or Plants");
+		levelTwoList.add("Locate Object");
+		levelTwoList.add("Magic Mouth");
+		levelTwoList.add("Maximilian Earthen Grasp");
+		levelTwoList.add("Moonbeam");
+		levelTwoList.add("Nystul's Magic Aura");
+		levelTwoList.add("Pass Without Trace");
+		levelTwoList.add("Phantasmal Force");
+		levelTwoList.add("Rope Trick");
+		levelTwoList.add("See Invisibility");
+		levelTwoList.add("Shatter");
+		levelTwoList.add("Snilloc's Snowball Swarm");
+		levelTwoList.add("Spider Climb");
+		levelTwoList.add("Spike Growth");
+		levelTwoList.add("Suggestion");
+		levelTwoList.add("Warding Bond");
+		levelTwoList.add("Web");
+	}
+	
+	public void addLevelThreeSpells() {
+		levelThreeList.add("Animate Dead");
+		levelThreeList.add("Catnap");
+		levelThreeList.add("Clairvoyance");
+		levelThreeList.add("Conjure Barrage");
+		levelThreeList.add("Erupting Earth");
+		levelThreeList.add("Fear");
+		levelThreeList.add("Feign Death");
+		levelThreeList.add("Fireball");
+		levelThreeList.add("Fly");
+		levelThreeList.add("Galder's Tower");
+		levelThreeList.add("Gaseous Form");
+		levelThreeList.add("Glyph of Warding");
+		levelThreeList.add("Haste");
+		levelThreeList.add("Hunger of Hadar");
+		levelThreeList.add("Hypnotic Pattern");
+		levelThreeList.add("Leomund's Tiny Hut");
+		levelThreeList.add("Lightning Bolt");
+		levelThreeList.add("Magic Circle");
+		levelThreeList.add("MajorImage");
+		levelThreeList.add("Melf Minute Meteors");
+		levelThreeList.add("Nondetection");
+		levelThreeList.add("Revivify");
+		levelThreeList.add("Sending");
+		levelThreeList.add("Sleet Storm");
+		levelThreeList.add("Slow");
+		levelThreeList.add("Speak with Dead");
+		levelThreeList.add("Spirit Guardians");
+		levelThreeList.add("Summon Lesser Demons");
+		levelThreeList.add("Tidal Wave");
+		levelThreeList.add("Tiny Hut");
+		levelThreeList.add("Tongues");
+		levelThreeList.add("Wall of Sand");
+		levelThreeList.add("Wall of Water");
+		levelThreeList.add("Water Breathing");
+		levelThreeList.add("Water Walk");
+		levelThreeList.add("Wind Wall");
+		levelThreeList.add("Animate Dead");
+	}
+	
+	public void generateRandomLevelOneSpells(int numberOfSpells) {
+		
+		for(int i = 0;i < numberOfSpells;i++) {
+			int randomIndex = rand.nextInt(levelOneList.size());
+			System.out.println(levelOneList.get(randomIndex));
+			levelOneList.remove(randomIndex);
+		}
+	}
+	
+	public void generateRandomLevelTwoSpells(int numberOfSpells) {
+		for(int i = 0;i < numberOfSpells;i++) {
+			int randomIndex = rand.nextInt(levelTwoList.size());
+			System.out.println(levelTwoList.get(randomIndex));
+			levelTwoList.remove(randomIndex);
+		}
+	}
+	
+	public void generateRandomLevelThreeSpells(int numberOfSpells) {
+		for(int i = 0;i < numberOfSpells;i++) {
+			int randomIndex = rand.nextInt(levelThreeList.size());
+			System.out.println(levelThreeList.get(randomIndex));
+			levelThreeList.remove(randomIndex);
+		}
+	}
+	
+}
